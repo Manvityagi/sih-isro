@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Host Entry</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+    <link href="/stylesheets/dashboard.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 class="intro">Dashboard</h1>
+    <div class="barcontainer">
+      <div class="barcontainerheader">
+        Bar Graph Analysis
+      </div>
+      <div class="bar" style="height:30%">
+        15%
+        <div class="barlabel">
+          3 star
+        </div>
+      </div>
+      <div class="bar" style="height:45%">
+        20%
+        <div class="barlabel">
+          1-2 star
+        </div>
+      </div>
+      <div class="bar" style="height:80%">
+        70%
+        <div class="barlabel">
+          4-5 star
+        </div>
+      </div>
+    </div>
+    <br /><br /><br /><br/><br/><br/>
+
+    <table class="container">
+      <h1 class="intro">Tabular View Of Results</h1>
+      <thead>
+        <tr>
+          <th><h1>Name of Reviewer</h1></th>
+          <th><h1>Review</h1></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% visitors.forEach(function(visitor){ %>
+        <tr>
+          <td><%= visitor.name %></td>
+          <td><%= visitor.review %></td>
+          <% }); %>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <a
+      style=" margin-left: 10%; margin-top: 20%; padding-top: 100px;  font-size: 30px; text-align: center; "
+      href="/"
+      >Go back</a
+    >
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visitor Checkout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/landing.css">
+</head>
+<body>
+      <div class="container">
+            <% if(error && error.length > 0){ %>
+                <div class="alert alert-danger">
+                  <%= error %>
+                </div>
+          
+                <%= success %>
+                <% } %> <% if(success && success.length > 0){ %>
+                <div class="alert alert-success">
+                  <%= success %>
+                </div>
+                <% } %>
+        <div class="row">
+             <h1 style="text-align: center">Checkout the visitor</h1>
+             <div style="width: 30%; margin: 25px auto;">
+
+                 <form action="/visitor/checkout" method="POST">
+                     <div class="form-group">
+                          <label for="name">Email</label>
+                          <input class="form-control" type="email" name="email" placeholder="abhinav@gmail.com">
+                     </div>         
+
+                     <div class="form-group">
+                        <button class="btn btn-md btn-primary">Check-Out!</button>
+                    </div>
+
+                 </form>  
+                 <a href="/">Go back</a>
+             </div>    
+             
+       </div>
+ </div>
+    
+</body>
+</html>
